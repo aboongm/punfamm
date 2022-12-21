@@ -39,3 +39,4 @@ end
 gem "dotenv-rails", "~> 2.8"
 gem "devise", "~> 4.8"
 gem "tailwindcss-rails", "~> 2.0"
+gem "rspec-rails", "~> 6.0"
