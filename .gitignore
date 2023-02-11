@@ -31,3 +31,5 @@
 /config/master.key
 node_modules/
 .env
+/app/assets/builds/*
+!/app/assets/builds/.keep
