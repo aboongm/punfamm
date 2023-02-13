@@ -49,13 +49,15 @@ The online news app will include the following key features and functionalities:
 
 Read about the [product sense](doc/productsense.md) that guides our approach to this work.
 
-**How CASA works:**
+**PUNFAMM Key Features::**
 
-- A foster youth is represented as a **CASA case**.
-- The **CASA case** is assigned to a **volunteer**.
-- The **volunteer** records their efforts spent on the CASA case as **case contacts**.
-- **Supervisors** oversee CASA **volunteers** by monitoring, tracking, and advising them on **CASA case** activities.
-- At PG CASA, the minimum volunteer commitment is one year (this varies by CASA chapter, in San Francisco the minimum commitment is ~ two years).  A volunteer's  lifecycle is very long, so there's a lot of activity for chapters to organize.
+A detailed list of the key features that need to be included in the website, such as news categories, search functionality, user accounts, and more.
+- News Categories: The online news app will offer a wide range of news categories, including local, national, and international news, as well as breaking news and top stories. Users will be able to select their preferred news categories and receive news updates in real-time.
+- Search Functionality: The online news app will offer a powerful search functionality that allows users to quickly find news articles of interest. The search will be able to search by keyword, date, and other parameters, and will return relevant results with precision.
+- User Accounts: Users will be able to create personal accounts, where they can save articles, receive news updates, and manage their preferences. This will enhance the user experience and provide users with a more personalized experience.
+- Personalized News Feed: The online news app will use machine learning algorithms to personalize the news feed for each user based on their interests and preferences. This will ensure that users receive news that is relevant to them, and will reduce the amount of irrelevant news that they receive.
+- Push Notifications: Users will be able to receive push notifications for breaking news and important stories, even when they are not using the app. This will help to keep users informed and engaged, and will provide a more convenient way to stay up-to-date with the latest news.
+- Social Media Integration: The online news app will be integrated with popular social media platforms, such as Facebook, Twitter, and Instagram. This will allow users to share articles and news updates with their friends and followers, and will help to increase the reach of the app.
 
 # Developing! ✨🛠✨  
 ## How to Contribute  
