@@ -34,6 +34,11 @@ group :development, :test do
   gem "factory_bot_rails", "~> 6.2"
   gem "faker", "~> 3.1"
   gem "capybara", "~> 3.38"
+  gem "pry-rails", "~> 0.3.9"
+end
+
+group :test do
+  gem "shoulda-matchers", "~> 5.3"
 end
 
 group :development do
@@ -52,3 +57,4 @@ gem "devise", "~> 4.8"
 gem "dotenv-rails", "~> 2.8"
 gem "tailwindcss-rails", "~> 2.0"
 gem "pundit", "~> 2.3"
+
