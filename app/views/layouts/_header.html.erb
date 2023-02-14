@@ -1,21 +1,44 @@
 <header class="bg-slate-900">
     <div class="flex justify-center items-center">
-        <%# <img src="/app/assets/images/punfamm-top-ads-space.png" alt="top=ads" /> %>
-        <img class="top-ads" src="https://tpc.googlesyndication.com/simgad/18261020352462551901" alt="top=ads" />
+        <%= image_tag 'punfamm-top-ads-space.png', alt: 'top ads', class: 'top-ads m-5' %>  
+        <%# <img class="" src="https://tpc.googlesyndication.com/simgad/18261020352462551901" alt="top=ads" /> %>
     </div>
     <div class="container mx-auto bg-slate-900 flex items-center justify-between">
         <div class="text-white flex items-center justify-between">
-            <div>hamburger</div>
-            <div>logo</div>
-            <div>world</div>
-            <div>US Politics</div>
-            <div>Business</div>
-            <div>Health</div>
-            <div>More</div>
+            <button id="menuButton" tabindex="-1" class="">
+                <svg class="menu-icon" style="outline:0" width="24" height="24" viewBox="0 0 64 64" fill="currentColor" tabindex="0" focusable="true" xmlns="https://www.w3.org/2000/svg" aria-labelledby="menuIconTitle" role="img">
+                    <title id="menuIconTitle">Open Menu</title>
+                    <path d="M52.75,47.84H11.25a2.08,2.08,0,1,0,0,4.16h41.5a2.08,2.08,0,1,0,0-4.16Z"></path>
+                    <path d="M52.75,28.92H11.25a2.08,2.08,0,1,0,0,4.16h41.5a2.08,2.08,0,1,0,0-4.16Z"></path>
+                    <path d="M11.25,14.16h41.5a2.08,2.08,0,1,0,0-4.16H11.25a2.08,2.08,0,1,0,0,4.16Z"></path>
+                </svg>
+            </button>
+            <%= link_to '#' do %>
+                <%= image_tag 'logo.png', alt: 'Punfamm logo', class: 'w-24 mx-3.5' %>               
+            <% end %>
+            <div class="mx-3" >
+                <%= link_to 'World'%>
+            </div>
+            <div class="mx-3" >
+                <%= link_to 'US Politics', class: "mx-3" %>
+            </div>
+            <div class="mx-3" >
+                <%= link_to 'Business', class: "mx-3" %>
+            </div>
+            <div class="mx-3" >
+                <%= link_to 'Health', class: "mx-3" %>
+            </div>
+            <div class="mx-3" >
+                <%= link_to 'More', class: "mx-3" %>
+            </div>
         </div>
         <div class="text-white flex items-center justify-between">
-            <div>Search Icon</div>
-            <div>Login</div>    
+            <div class="mx-3">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                    <path fill-rule="evenodd" d="M10.5 3.75a6.75 6.75 0 100 13.5 6.75 6.75 0 000-13.5zM2.25 10.5a8.25 8.25 0 1114.59 5.28l4.69 4.69a.75.75 0 11-1.06 1.06l-4.69-4.69A8.25 8.25 0 012.25 10.5z" clip-rule="evenodd" />
+                </svg>
+            </div>
+            <button class="border border-slate-50 rounded px-0.5">Log in</button>    
         </div>
     </div>
 </header>
