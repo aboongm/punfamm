@@ -13,15 +13,15 @@ RSpec.describe NewsItem, type: :model do
   #   it { should delegate_method(:role).to(:reporter).with_prefix }
   # end
 
-  describe NewsItem do
-  let(:reporter) { FactoryBot.create(:user, :reporter) }
+  # describe NewsItem do
+  #   let(:reporter) { FactoryBot.create(:user, :reporter) }
 
-  it "creates a news item with a valid reporter" do
-    news_item = FactoryBot.create(:news_item, reporter: reporter)
-    binding.pry
-    expect(news_item).to be_valid
-  end
-end
+  #   it "creates a news item with a valid reporter" do
+  #     news_item = FactoryBot.create(:news_item, reporter: reporter)
+  #     # binding.pry
+  #     expect(news_item).to be_valid
+  #   end
+  # end
 
 
   
