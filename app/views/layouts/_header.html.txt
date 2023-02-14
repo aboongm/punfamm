@@ -1,0 +1,94 @@
+<header class=" bg-white dark:bg-gray-800 flex lg:flex-col py-4 md:py-0">
+    <div class="py-0 lg:container mx-auto  sm:px-7 flex align-center justify-between">
+        <div class="flex" data-controller="hello">
+            <!-- Burger Icon -->                    
+            <div id="bgIcon" data-action="click->hello#toggleMenu"
+                class="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 flex justify-center items-center cursor-pointer hamburger-fixed">
+                <img class="dark:bg-white" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/header-3-svg6.svg" alt="burger" />
+                <img class="dark:bg-white hidden" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/header-3-svg7.svg" alt="cross" /> 
+            </div>                    
+            <button class="mobile-hide dark:text-white btn inline-block px-6 py-2.5 text-black font-medium text-xs leading-tight uppercase rounded flex items-center" type="button" id="button-addon2">
+                <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="w-4" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                <path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"></path>
+                </svg>
+            </button>
+        </div>
+        <div class="mobile-hide flex items-center justify-around">
+            <%= link_to "UZBEKISTAN", '#', class: "text-sm font-normal text-gray-800 dark:text-white  hover:text-gray-700 dark:hover:text-gray-300 px-2 my-2" %>
+            <%= link_to "INTERNATIONAL", '#', class: "text-sm font-normal text-gray-800 dark:text-white  hover:text-gray-700 dark:hover:text-gray-300 px-2 my-2" %>
+            <%= link_to "CHINA", '#', class: "text-sm font-normal text-gray-800 dark:text-white  hover:text-gray-700 dark:hover:text-gray-300 px-2 my-2" %>
+            <%= link_to "INDIA", '#', class: "text-sm font-normal text-gray-800 dark:text-white  hover:text-gray-700 dark:hover:text-gray-300 px-2 my-2" %>
+                <%= link_to "RUSSIA", '#', class: "text-sm font-normal text-gray-800 dark:text-white  hover:text-gray-700 dark:hover:text-gray-300 px-2 my-2" %>            </div>
+        <div class="mobile-hide flex align-center justify-around">
+            <% if current_user  %>
+                <%= button_to "Logout", destroy_user_session_path, method: :delete, class: "text-sm font-normal rounded-md text-white dark:text-white bg-cyan-700 hover:bg-cyan-600 hover:text-white dark:hover:text-gray-300 px-4 py-2 my-1" %>
+            <% else %>
+                <%= link_to "Subscribe For $0.2/week", new_user_registration_path, class: "text-sm font-bold rounded-md text-white  bg-cyan-700 dark:text-white  hover:bg-cyan-600 hover:text-white dark:hover:text-gray-300 px-4 py-2 my-1" %>            
+                <%= link_to "Login", new_user_session_path, class: "ml-2 text-sm font-normal rounded-md text-white dark:text-white bg-cyan-700 hover:bg-cyan-600 hover:text-white dark:hover:text-gray-300 px-4 py-2 my-1" %>
+            <% end  %>
+        </div>
+    </div>
+
+    <nav class="container mx-auto md:mb-2 py-0 sm:px-7 py-5 px-4 lg:grid-container lg:grid lg:grid-cols-12 flex items-center justify-between ">
+        <!-- For large and Medium-sized Screen -->                
+            <div class="mobile-hide dark:text-white col-span-3 flex flex-col items-start space-x-6">
+                <%= Date.today.to_fs(:long) %> 
+                <p><%= link_to "Today's Paper" %></p>
+            </div>
+            
+            <div class="container lg:col-span-6 flex space-x-3 justify-center items-center">
+                <h1 class="header font-bold leading-6 text-gray-800 dark:text-white" >
+                    <%= link_to "The Punfam Times", root_path  %>
+                </h1>
+            </div>
+            
+            <div data-controller="hello" class="lg:col-span-3 flex items-center justify-end">
+                <% if current_user  %>
+                    <% if current_user.first_name?  %>
+                        <img data-action="click->hello#profileDropdown" class="w-10 h-10 rounded-full" src="<%= url_for(current_user.image) %>" alt="Default avatar">
+                    <% else %>
+                        <div data-action="click->hello#profileDropdown" class="w-10 h-10 rounded-full bg-slate-700 text-white font-bold menuAvatar"><h1>EA</h1></div>
+                    <% end %>
+                <% else  %>
+                    <div class="w-10 h-10 rounded-full bg-slate-700 text-white font-bold menuAvatar"><h1>EA</h1></div>
+                <% end %>
+            </div>
+
+        <!-- Mobile and small-screen devices (toggle Menu) -->
+        <div id="MobileNavigation" class="hidden sm:hidden mt-4 mx-auto">
+            <div class="flex flex-row items-center justify-center space-x-6">
+                <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/header-3-svg1.svg" alt="twitter" />                       
+                <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/header-3-svg2.svg" alt="facebook" />
+                <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/header-3-svg3.svg" alt="linkdin" />
+                <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/header-3-svg4.svg" alt="instagram" />                                                             
+            </div>                    
+        </div>
+    </nav>
+
+    <div class="mobile-hide justify-center flex-col py-0 lg:container mx-auto  sm:px-7">
+        <div>
+            <div class="flex item-center justify-center border-t-2  lg:container lg:flex md:flex-wrap">
+                <%= link_to "World", pages_world_path, class: "text-sm font-normal text-gray-800 dark:text-white  hover:text-gray-700 dark:hover:text-gray-300 px-1 py-2 my-2" %>    
+                <%= link_to "Uzbekistan", pages_uzbekistan_path, class: "text-sm font-normal text-gray-800 dark:text-white  hover:text-gray-700 dark:hover:text-gray-300 px-1 py-2 my-2" %>    
+                <%= link_to "Politics", pages_politics_path, class: "text-sm font-normal text-gray-800 dark:text-white  hover:text-gray-700 dark:hover:text-gray-300 px-1 py-2 my-2" %>    
+                <%= link_to "Tashkent", pages_tashkent_path, class: "text-sm font-normal text-gray-800 dark:text-white  hover:text-gray-700 dark:hover:text-gray-300 px-1 py-2 my-2" %>    
+                <%= link_to "Business", pages_business_path, class: "text-sm font-normal text-gray-800 dark:text-white  hover:text-gray-700 dark:hover:text-gray-300 px-1 py-2 my-2" %>    
+                <%= link_to "Opinion", pages_opinion_path, class: "text-sm font-normal text-gray-800 dark:text-white  hover:text-gray-700 dark:hover:text-gray-300 px-1 py-2 my-2" %>    
+                <%= link_to "Science", pages_science_path, class: "text-sm font-normal text-gray-800 dark:text-white  hover:text-gray-700 dark:hover:text-gray-300 px-1 py-2 my-2" %>    
+                <%= link_to "Health", pages_health_path, class: "text-sm font-normal text-gray-800 dark:text-white  hover:text-gray-700 dark:hover:text-gray-300 px-1 py-2 my-2" %>    
+                <%= link_to "Sports", pages_sports_path, class: "text-sm font-normal text-gray-800 dark:text-white  hover:text-gray-700 dark:hover:text-gray-300 px-1 py-2 my-2" %>    
+                <%= link_to "Arts", pages_arts_path, class: "text-sm font-normal text-gray-800 dark:text-white  hover:text-gray-700 dark:hover:text-gray-300 px-1 py-2 my-2" %>    
+                <%= link_to "Books", pages_books_path, class: "text-sm font-normal text-gray-800 dark:text-white  hover:text-gray-700 dark:hover:text-gray-300 px-1 py-2 my-2" %>    
+                <%= link_to "Style", pages_style_path, class: "text-sm font-normal text-gray-800 dark:text-white  hover:text-gray-700 dark:hover:text-gray-300 px-1 py-2 my-2" %>    
+                <%= link_to "Food", pages_food_path, class: "text-sm font-normal text-gray-800 dark:text-white  hover:text-gray-700 dark:hover:text-gray-300 px-1 py-2 my-2" %>    
+                <%= link_to "Travel", pages_travel_path, class: "text-sm font-normal text-gray-800 dark:text-white  hover:text-gray-700 dark:hover:text-gray-300 px-1 py-2 my-2" %>    
+                <%= link_to "Magazine", pages_magazine_path, class: "text-sm font-normal text-gray-800 dark:text-white  hover:text-gray-700 dark:hover:text-gray-300 px-1 py-2 my-2" %>    
+                <%= link_to "Real Estate", pages_realestate_path, class: "text-sm font-normal text-gray-800 dark:text-white  hover:text-gray-700 dark:hover:text-gray-300 px-1 py-2 my-2" %>    
+            </div>
+        </div>
+        <div class="border-t-2 border-b-2 height"></div>
+    </div>
+
+        
+</header>
+    
