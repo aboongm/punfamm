@@ -3,7 +3,7 @@
         <%= image_tag 'punfamm-top-ads-space.png', alt: 'top ads', class: 'top-ads m-5' %>  
     </div>
 </section>
-<header id="header" class="bg-slate-900" data-controller="header" >
+<header id="header" class="bg-slate-900 screen-sm-md-padding" data-controller="header" >
     <div class="container mx-auto bg-slate-900 flex items-center justify-between h-12">
         <div class="text-white flex items-center justify-between">
             <button id="bgIcon" data-header-target="openMenu" tabindex="-1" class="">
@@ -17,19 +17,19 @@
             <%= link_to '#' do %>
                 <%= image_tag 'logo.png', alt: 'Punfamm logo', class: 'w-24 mx-3.5' %>               
             <% end %>
-            <div class="mx-3" >
-                <%= link_to 'World'%>
+            <div class="mx-3  text-base header-items" >
+                <%= link_to 'World', class: "mx-3"%>
             </div>
-            <div class="mx-3" >
+            <div class="mx-3 text-base header-items" >
                 <%= link_to 'Politics', class: "mx-3" %>
             </div>
-            <div class="mx-3" >
+            <div class="mx-3 text-base header-items" >
                 <%= link_to 'Business', class: "mx-3" %>
             </div>
-            <div class="mx-3" >
+            <div class="mx-3 text-base header-items" >
                 <%= link_to 'Health', class: "mx-3" %>
             </div>
-            <div class="mx-3" >
+            <div class="mx-3 text-base header-items" >
                 <%= link_to 'More', class: "mx-3" %>
             </div>
         </div>
@@ -41,7 +41,7 @@
             </button>
             <button 
                 data-header-target="userAuthLink" 
-                class="border border-slate-50 rounded px-0.5"
+                class="border border-slate-50 rounded px-1 py-0.5 text-sm"
             >
                 Log in
             </button>    

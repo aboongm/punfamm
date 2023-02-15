@@ -38,8 +38,12 @@ body {
   font-size: 28px;
 }
 
-#bgIcon {
-  padding-left: 10px;
+.screen-sm-md-padding {
+  padding: 0 18px 0 18px;
+}
+
+.header-items {
+  display: none;
 }
 
 #menuList {
@@ -173,6 +177,10 @@ input[type='file'] {
     width: 800px;
   }
 
+  .header-items {
+    display: block;
+  }
+
   .home {
     display: grid;
     grid-template-columns: 5fr 2fr;    
@@ -278,9 +286,14 @@ input[type='file'] {
   .header {
     font-size: 44px;
   }
-  #bgIcon {
+
+  .screen-sm-md-padding {
+  padding: 0;
+}
+
+  /* #bgIcon {
     padding-left: 0;
-  }
+  } */
 
   #dropdown {
     position: fixed;
