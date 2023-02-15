@@ -3,8 +3,14 @@ import { enter, leave, toggle } from 'el-transition';
 
 export default class extends Controller {
   static targets = ['openMenu', 'searchNews', 'closeMenu', 'userAuthLink'];
-
+  
   connect() {
+    const header = document.getElementById('header');
+    const sticky = header.offsetTop;
+    const headerRect = header.getBoundingClientRect();
+    // const modal = document.getElementById("menuList");
+    // const modalTop = headerRect.bottom;
+
     this.userAuthLinkTargets.forEach((link) => {
       link.addEventListener('click', (e) => {
         e.preventDefault();
@@ -16,6 +22,7 @@ export default class extends Controller {
       link.addEventListener('click', (e) => {
         e.preventDefault();
         enter(document.getElementById('menuList'))
+        // modal.style.top = modalTop + "px";
       });
     });
     
@@ -33,11 +40,6 @@ export default class extends Controller {
       });
     });
     
-    const header = document.getElementById('header');
-    const sticky = header.offsetTop;
-    const headerRect = header.getBoundingClientRect();
-    // const modal = document.getElementById("menuList");
-    // const modalTop = headerRect.bottom;
     
     window.onscroll = () => {
       this.myFunction(header, sticky)

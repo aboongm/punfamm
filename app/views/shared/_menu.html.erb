@@ -1,20 +1,42 @@
-<div id="menuList" class="hidden p-5 border-2 w-full bg-slate-900">
-    <div data-controller="header" >    
-        <button data-header-target="closeMenu" type="button" id="closeIcon" class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
-            <svg  class="h-6 w-6 svgWidth" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-            </svg>
-        </button>
+<div id="menuList" class="hidden border-2 w-full bg-slate-900 z-10">
+    <div class="border-b border-slate-600">    
+        <div class="container mx-auto">
+            <div data-controller="header" class="relative p-5 h-14">    
+                <button data-header-target="closeMenu" type="button" id="closeIcon" class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+                    <svg  class="h-6 w-6 svgWidth" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+        </div>
     </div>
 
-    <div class="sidebar__list">
-        <%# <%= link_to "Home page", pages_home_path, class: "sidebar__item" %>    
-        <%# <%= link_to "World", pages_world_path, class: "sidebar__item" %>    
-        <%# <%= link_to "Uzbekistan", pages_uzbekistan_path, class: "sidebar__item" %>     
-        <%# <%= link_to "Politics", pages_politics_path, class: "sidebar__item" %> 
-        <h1 class="sidebar__item text-white">some category</h1>
-        <h1 class="sidebar__item text-white">some category</h1>
-        <h1 class="sidebar__item text-white">some category</h1>
-        <h1 class="sidebar__item text-white">some category</h1>
+    <div class="container mx-auto">
+        <div class="py-4 relative">
+            <input type="text" class="w-full" placeholder="Search PUNFAMM">
+            <button color="inherit" width="24,,80" tabindex="0" aria-label="Search" class="search bg-white flex items-center justify-center">
+                <div class="mx-1" font-size=",,14" color="inherit">Search</div>
+                <div class="mx-1" display="none,,block">
+                    <svg class="arrow-right-10-icon" style="outline:0" width="10" height="10" viewBox="0 0 20 20" fill="#4D4D4D" tabindex="-1" focusable="false" xmlns="https://www.w3.org/2000/svg" aria-hidden="true">
+                        <path d="M1.53,8.52H14.76L10,3.71a1.5,1.5,0,0,1,2.12-2.12l7.44,7.47a1.49,1.49,0,0,1,0,2.12l-7.44,7.47a1.5,1.5,0,0,1-2.12,0,1.51,1.51,0,0,1,0-2.12l5-5H1.53a1.5,1.5,0,1,1,0-3Z"></path>
+                    </svg>
+                </div>
+                <div class="bg-white hidden" display="block,,none">
+                    <svg class="search-icon" style="outline:0" width="24" height="24" viewBox="0 0 64 64" fill="#4D4D4D" tabindex="-1" focusable="false" xmlns="https://www.w3.org/2000/svg" aria-hidden="true">
+                        <path d="M55.3,51.89,42.46,39a19.22,19.22,0,1,0-3.38,3.43L51.9,55.29a2.38,2.38,0,0,0,3.4,0A2.42,2.42,0,0,0,55.3,51.89ZM11.2,27.28a16,16,0,1,1,16,16.07A16.07,16.07,0,0,1,11.2,27.28Z"></path>
+                    </svg>
+                </div>
+            </button>
+        </div>
+        <div class="sidebar__list mt-5">
+            <%# <%= link_to "Home page", pages_home_path, class: "sidebar__item" %>    
+            <%# <%= link_to "World", pages_world_path, class: "sidebar__item" %>    
+            <%# <%= link_to "Uzbekistan", pages_uzbekistan_path, class: "sidebar__item" %>     
+            <%# <%= link_to "Politics", pages_politics_path, class: "sidebar__item" %> 
+            <h1 class="sidebar__item text-white">some category</h1>
+            <h1 class="sidebar__item text-white">some category</h1>
+            <h1 class="sidebar__item text-white">some category</h1>
+            <h1 class="sidebar__item text-white">some category</h1>
+        </div>
     </div>
 </div>
