@@ -59,7 +59,7 @@ body {
 #closeIcon {
   position: absolute;
   top: 14px;
-  right: 0;
+  right: 12px;
   font-size: 30px;
   padding: 3px;
   cursor: pointer;
@@ -346,6 +346,15 @@ input[type='file'] {
   .header {
     font-size: 44px;
   }
+
+  #closeIcon {
+  position: absolute;
+  top: 14px;
+  right: 0;
+  font-size: 30px;
+  padding: 3px;
+  cursor: pointer;
+}
 
   .screen-sm-md-padding {
   padding: 0;

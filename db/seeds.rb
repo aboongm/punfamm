@@ -8,8 +8,8 @@
 
 User.first_or_create!(email: 'editor1@punfamm.com', password: 'password', password_confirmation: 'password', role: "editor")
 User.create!(email: 'editor2@punfamm.com', password: 'password', password_confirmation: 'password', role: "editor")
-User.create!(email: 'reporter1@punfamm.com', password: 'password', password_confirmation: 'password', role: "reporter")
-User.create!(email: 'reporter2@punfamm.com', password: 'password', password_confirmation: 'password', role: "reporter")
+User.create!(email: 'reporter1@punfamm.com', password: 'password', password_confirmation: 'password', role: "author")
+User.create!(email: 'reporter2@punfamm.com', password: 'password', password_confirmation: 'password', role: "author")
 User.create!(email: 'subscriber1@punfamm.com', password: 'password', password_confirmation: 'password', role: "subscriber")
 User.create!(email: 'subscriber2@punfamm.com', password: 'password', password_confirmation: 'password', role: "subscriber")
 
