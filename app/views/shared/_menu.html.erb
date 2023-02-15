@@ -1,28 +1,20 @@
 <div id="menuList" class="hidden p-5 border-2 w-full bg-slate-900">
-    
-    <button data-controller="hello" type="button" id="closeIcon" class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
-        <svg data-action="click->hello#toggleMenu"  class="h-6 w-6 svgWidth" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-        </svg>
-    </button>
+    <div data-controller="header" >    
+        <button data-header-target="closeMenu" type="button" id="closeIcon" class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+            <svg  class="h-6 w-6 svgWidth" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+        </button>
+    </div>
 
     <div class="sidebar__list">
-        <%= link_to "Home page", pages_home_path, class: "sidebar__item" %>    
-        <%= link_to "World", pages_world_path, class: "sidebar__item" %>    
-        <%= link_to "Uzbekistan", pages_uzbekistan_path, class: "sidebar__item" %>    
-        <%= link_to "Politics", pages_politics_path, class: "sidebar__item" %>    
-        <%= link_to "Tashkent", pages_tashkent_path, class: "sidebar__item" %>    
-        <%= link_to "Business", pages_business_path, class: "sidebar__item" %>    
-        <%= link_to "Opinion", pages_opinion_path, class: "sidebar__item" %>    
-        <%= link_to "Science", pages_science_path, class: "sidebar__item" %>    
-        <%= link_to "Health", pages_health_path, class: "sidebar__item" %>    
-        <%= link_to "Sports", pages_sports_path, class: "sidebar__item" %>    
-        <%= link_to "Arts", pages_arts_path, class: "sidebar__item" %>    
-        <%= link_to "Books", pages_books_path, class: "sidebar__item" %>    
-        <%= link_to "Style", pages_style_path, class: "sidebar__item" %>    
-        <%= link_to "Food", pages_food_path, class: "sidebar__item" %>    
-        <%= link_to "Travel", pages_travel_path, class: "sidebar__item" %>    
-        <%= link_to "Magazine", pages_magazine_path, class: "sidebar__item" %>    
-        <%= link_to "Real Estate", pages_realestate_path, class: "sidebar__item" %>               
+        <%# <%= link_to "Home page", pages_home_path, class: "sidebar__item" %>    
+        <%# <%= link_to "World", pages_world_path, class: "sidebar__item" %>    
+        <%# <%= link_to "Uzbekistan", pages_uzbekistan_path, class: "sidebar__item" %>     
+        <%# <%= link_to "Politics", pages_politics_path, class: "sidebar__item" %> 
+        <h1 class="sidebar__item text-white">some category</h1>
+        <h1 class="sidebar__item text-white">some category</h1>
+        <h1 class="sidebar__item text-white">some category</h1>
+        <h1 class="sidebar__item text-white">some category</h1>
     </div>
 </div>
