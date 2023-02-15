@@ -58,10 +58,19 @@ body {
 
 #closeIcon {
   position: absolute;
-  top:12px;
+  top: 14px;
   right: 0;
   font-size: 30px;
-  padding: 5px;
+  padding: 3px;
+  cursor: pointer;
+}
+
+#closeAvatar {
+  position: absolute;
+  top: 8px;
+  right: 4px;
+  font-size: 30px;
+  padding: 3px;
   cursor: pointer;
 }
 
@@ -201,6 +210,26 @@ input[type='file'] {
 
 /* .dropdown:hover .dropbtn {background-color: #3e8e41;} */
 
+
+.airbnb__profile,
+.airbnb__search {
+  display: flex;
+  padding: 5px 5px 5px 12px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid lightgray;
+  border-radius: 21px;
+}
+
+.airbnb__avatar {
+  color: rgb(255, 255, 255);
+  flex: 0 0 30px;
+  height: 32px;
+  overflow: hidden;
+  position: relative;
+  width: 32px;
+  z-index: 1;
+}
 
 @media screen and (min-width: 768px) {
   .top-ads {

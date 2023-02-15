@@ -2,7 +2,7 @@ import { Controller } from '@hotwired/stimulus';
 import { enter, leave, toggle } from 'el-transition';
 
 export default class extends Controller {
-  static targets = ['openMenu', 'searchNews', 'closeMenu', 'userAuthLink'];
+  static targets = ['openMenu', 'searchNews', 'closeMenu', 'openAvatar', 'closeAvatar', 'userAuthLink'];
   
   connect() {
     const header = document.getElementById('header');
@@ -38,6 +38,20 @@ export default class extends Controller {
         e.preventDefault();
         leave(document.getElementById('menuList'))
       });
+    });
+
+    this.openAvatarTargets.forEach((link) => { 
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        enter(document.getElementById('menu-dropdown-items'))
+      })
+    });
+
+    this.closeAvatarTargets.forEach((link) => { 
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        leave(document.getElementById('menu-dropdown-items'))
+      })
     });
     
     
