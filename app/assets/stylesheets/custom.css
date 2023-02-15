@@ -143,9 +143,9 @@ input[type='file'] {
 
 .world__title {
   font-family: Georgia, 'Times New Roman', Times, serif;
-  font-size: 40px;
+  font-size: 28px;
   font-weight: 900;
-  letter-spacing: -4px;
+  letter-spacing: -2px;
 }
 
 .news__title {

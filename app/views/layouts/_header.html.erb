@@ -17,19 +17,19 @@
             <%= link_to '#' do %>
                 <%= image_tag 'logo.png', alt: 'Punfamm logo', class: 'w-24 mx-3.5' %>               
             <% end %>
-            <div class="mx-3  text-base header-items" >
-                <%= link_to 'World', class: "mx-3"%>
+            <div class="mx-3  text-sm header-items" >
+                <%= link_to "World", pages_world_path, class: "mx-3" %>                    
             </div>
-            <div class="mx-3 text-base header-items" >
-                <%= link_to 'Politics', class: "mx-3" %>
+            <div class="mx-3 text-sm header-items" >
+                <%= link_to "Politics", pages_politics_path, class: "mx-3" %>
             </div>
-            <div class="mx-3 text-base header-items" >
-                <%= link_to 'Business', class: "mx-3" %>
+            <div class="mx-3 text-sm header-items" >
+                <%= link_to 'Business', pages_business_path, class: "mx-3" %>
             </div>
-            <div class="mx-3 text-base header-items" >
-                <%= link_to 'Health', class: "mx-3" %>
+            <div class="mx-3 text-sm header-items" >
+                <%= link_to 'Health' , pages_health_path, class: "mx-3" %>
             </div>
-            <div class="mx-3 text-base header-items" >
+            <div class="mx-3 text-sm header-items" >
                 <%= link_to 'More', class: "mx-3" %>
             </div>
         </div>
@@ -44,7 +44,18 @@
                 class="border border-slate-50 rounded px-1 py-0.5 text-sm"
             >
                 Log in
-            </button>    
+            </button>
+            <div data-controller="hello" class="lg:col-span-3 flex items-center justify-end">
+                <% if current_user  %>
+                    <% if current_user.first_name?  %>
+                        <img data-action="click->hello#profileDropdown" class="w-10 h-10 rounded-full" src="<%= url_for(current_user.image) %>" alt="Default avatar">
+                    <% else %>
+                        <div data-action="click->hello#profileDropdown" class="w-10 h-10 rounded-full bg-slate-700 text-white font-bold menuAvatar"><h1>EA</h1></div>
+                    <% end %>
+                <% else  %>
+                    <div class="w-10 h-10 rounded-full bg-slate-700 text-white font-bold menuAvatar"><h1>EA</h1></div>
+                <% end %>
+            </div>  
         </div>
     </div>
 </header>

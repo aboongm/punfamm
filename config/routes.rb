@@ -8,21 +8,24 @@ Rails.application.routes.draw do
   
   get 'pages/home'
   get 'pages/world'
-  get 'pages/uzbekistan'
   get 'pages/politics'
-  get 'pages/tashkent'
   get 'pages/business'
-  get 'pages/opinion'
-  get 'pages/science'
   get 'pages/health'
-  get 'pages/sports'
-  get 'pages/arts'
-  get 'pages/books'
+
+  get 'pages/entertainment'
   get 'pages/style'
-  get 'pages/food'
   get 'pages/travel'
-  get 'pages/magazine'
-  get 'pages/realestate'
+  get 'pages/sports'
+  get 'pages/videos'
+
+  get 'pages/features'
+  get 'pages/market'
+  get 'pages/opinion'
+  get 'pages/tech'
+
+  # get 'pages/weather'
+  # get 'pages/photos'
+  # get 'pages/punfamm_profiles'
   
   devise_for :users,
   path: '',
