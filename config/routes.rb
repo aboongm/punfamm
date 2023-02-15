@@ -6,26 +6,19 @@ Rails.application.routes.draw do
   resources :categories
   root "pages#home"
   
-  get 'pages/home'
   get 'pages/world'
   get 'pages/politics'
   get 'pages/business'
   get 'pages/health'
-
   get 'pages/entertainment'
   get 'pages/style'
   get 'pages/travel'
   get 'pages/sports'
   get 'pages/videos'
-
+  get 'pages/tech'
   get 'pages/features'
   get 'pages/market'
   get 'pages/opinion'
-  get 'pages/tech'
-
-  # get 'pages/weather'
-  # get 'pages/photos'
-  # get 'pages/punfamm_profiles'
   
   devise_for :users,
   path: '',

@@ -14,7 +14,7 @@
                     <path d="M11.25,14.16h41.5a2.08,2.08,0,1,0,0-4.16H11.25a2.08,2.08,0,1,0,0,4.16Z"></path>
                 </svg>
             </button>
-            <%= link_to '#' do %>
+            <%= link_to root_path do %>
                 <%= image_tag 'logo.png', alt: 'Punfamm logo', class: 'w-24 mx-3.5' %>               
             <% end %>
             <div class="mx-3  text-sm header-items" >
@@ -29,8 +29,16 @@
             <div class="mx-3 text-sm header-items" >
                 <%= link_to 'Health' , pages_health_path, class: "mx-3 hover:border-b-4 hover:border-red-600 pb-1" %>
             </div>
-            <div class="mx-3 text-sm header-items" >
-                <%= link_to 'More', class: "mx-3 hover:border-b-4 hover:border-red-600 pb-1" %>
+            <%# <div class="mx-3 text-sm header-items" > %>
+                <%# <%= link_to 'More', class: "mx-3 hover:border-b-4 hover:border-red-600 pb-1" %>
+            <%# </div> %>
+            <div class="dropdown mx-3 text-sm header-items">
+                <button class="dropbtn">More</button>
+                <div class="dropdown-content">
+                    <%= link_to "Style", pages_style_path %>
+                    <%= link_to "Travel", pages_travel_path %>
+                    <%= link_to "Sports", pages_sports_path %>
+                </div>
             </div>
         </div>
         <div class="text-white flex items-center justify-between">
