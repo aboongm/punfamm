@@ -14,9 +14,11 @@
     </div>
   </p>
 
-  <p class="my-5 text-lg font-normal">
-    <%= simple_format news_item.content %>
-  </p>
+  <% @news_item.content.split(/\n+/).each_with_index do |paragraph, index| %>
+  <p class="mt-4"><%= paragraph %></p>
+  
+<% end %>
+
 
   <% if current_user&.editor? || current_user&.author? %>
     <p class="my-5">
