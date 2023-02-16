@@ -12,7 +12,7 @@ gem "importmap-rails"
 gem "turbo-rails"
 gem "stimulus-rails"
 gem "jbuilder"
-# gem "redis", "~> 4.0"
+gem "redis", "~> 4.0"
 # gem "kredis"
 # gem "bcrypt", "~> 3.1.7"
 gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
@@ -22,6 +22,11 @@ gem "image_processing", "~> 1.2"
 
 group :development, :test do
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
+  gem "rspec-rails", "~> 6.0"
+  gem "factory_bot_rails", "~> 6.2"
+  gem "faker", "~> 3.1"
+  gem "pry-rails", "~> 0.3.9"
+  gem "shoulda-matchers", "~> 5.3"
 end
 
 group :development do
@@ -39,3 +44,4 @@ end
 gem "dotenv-rails", "~> 2.8"
 gem "devise", "~> 4.8"
 gem "tailwindcss-rails", "~> 2.0"
+
