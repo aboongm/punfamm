@@ -8,7 +8,7 @@ class User < ApplicationRecord
   has_many :comments, dependent: :destroy
   has_one_attached :image  
   
-  roles = %w[admin editor author subscriber]
+  roles = %w[editor subscriber author]
   roles.each do |role_name|
     define_method "#{role_name}?" do
       role == role_name
