@@ -11,28 +11,28 @@
     </div>
   <% end %>
 
-  <div class="my-5 title">
+  <div class="my-3 title">
     <%= form.label :title %> <br/>
-    <%= form.text_field :title, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+    <%= form.text_field :title, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 w-full" %>
   </div>
   
-  <div class="my-5 category">
+  <div class="my-3 category">
     <%= form.label :category_id %><br/>
     <%= form.select :category_id, 
       Category.all.map { |c| [c.title, c.id] } %>
   </div>
 
-  <div class="my-5">
+  <div class="my-3">
     <%= form.label :content %><br/>
     <%= form.text_area :content, class: "content" %>
   </div>
 
-  <div class="my-5 image">
+  <div class="my-3 image">
     <%= form.label :image_upload %><br/>
      <%= form.file_field :image, class: "p-3" %>
   </div>
 
-  <div class="inline my-5">
-    <%= form.submit "Create",  class: "rounded-lg py-3 px-5 bg-blue-600 text-white inline-block font-medium cursor-pointer" %>
+  <div class="inline my-3">
+    <%= form.submit "Create the News",  class: "text-sm rounded-lg py-3 px-5 bg-blue-600 text-white inline-block font-medium cursor-pointer" %>
   </div>
 <% end %>

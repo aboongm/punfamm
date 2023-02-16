@@ -9,8 +9,8 @@
     <%# <strong class="news__title block font-medium mb-1">Title:</strong> %>
     <%= news_item.title %>
     <div class="flex items-center">
-      <img data-action="click->hello#profileDropdown" class="w-10 h-10 rounded-full mr-2" src="<%= url_for(@author.image) %>" alt="Default avatar">
-      <p >By <%= @name %></p>
+      <img class="w-10 h-10 rounded-full mr-2" src="<%= url_for(news_item.author.image) %>" alt="Default avatar">
+      <p >By <%= news_item.author.first_name %></p>
     </div>
   </p>
 
@@ -34,9 +34,9 @@
       <%= news_item.category_id %>
     </p>
 
-     <%= link_to 'Edit this news_item', edit_news_item_path(@news_item), class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+     <%= link_to 'Edit this news_item', edit_news_item_path(news_item), class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
     <div class="inline-block ml-2">
-      <%= button_to 'Destroy this news_item', news_item_path(@news_item), method: :delete, class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 font-medium" %>
+      <%= button_to 'Destroy this news_item', news_item_path(news_item), method: :delete, class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 font-medium" %>
     </div>
     <%= link_to 'Back to news_items', news_items_path, class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
 
