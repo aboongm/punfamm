@@ -19,6 +19,7 @@ Rails.application.routes.draw do
   get 'pages/features'
   get 'pages/market'
   get 'pages/opinion'
+  get 'pages/underconstruction'
   
   devise_for :users,
   path: '',

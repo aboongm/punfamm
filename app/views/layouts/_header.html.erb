@@ -67,19 +67,19 @@
                         <% if !user_signed_in? %>
                             <%= link_to "Log in", new_user_session_path, class: "text-sm" %>
                             <%= link_to "Sign up", new_user_registration_path, class: "text-sm" %>
-                            <%= link_to 'Become an editor', class: "text-sm" %>
-                            <%= link_to 'Become a reporter', class: "text-sm" %>
-                            <%= link_to 'Help', class: "text-sm" %>
+                            <%= link_to 'Become an editor', pages_underconstruction_path, class: "text-sm" %>
+                            <%= link_to 'Become a reporter', pages_underconstruction_path, class: "text-sm" %>
+                            <%= link_to 'Help', pages_underconstruction_path, class: "text-sm" %>
                         <% end %>
                         <% if user_signed_in? %>
-                                <%= link_to 'Messages', class: "text-sm" %>
+                                <%= link_to 'Messages', pages_underconstruction_path, class: "text-sm" %>
                                 <%= link_to 'Edit Account', edit_user_registration_path, class: "text-sm" %>
                             <% if current_user&.editor? %>
-                                <%= link_to "Create a News", new_news_item_path %>
-                                <%= link_to "Create The Daily", new_editor_path %>
+                                <%= link_to "Create a News", new_news_item_path, class: "text-sm" %>
+                                <%= link_to "Create The Daily", new_editor_path, class: "text-sm" %>
                             <% end %>
                             <% if current_user&.author? %>
-                                <%= link_to "Create a News", new_news_item_path %>
+                                <%= link_to "Create a News", new_news_item_path, class: "text-sm" %>
                             <% end %>
                                 <%= link_to 'Logout', destroy_user_session_path, data: {"turbo-method": :delete}, class: "text-sm" %>
                         <% end %>
