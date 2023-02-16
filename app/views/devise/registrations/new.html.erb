@@ -1,34 +1,40 @@
-<div class="flex flex-col items-center justify-center p-5">
+<div class="min-h-full flex items-start justify-center py-12 px-4 sm:px-6 lg:px-8 bg-black h-screen">
+<div class="max-w-md w-full space-y-8" >
+    <div class="flex items-start justify-center w-full">
+      <%= link_to root_path do %>
+          <%= image_tag 'logo.png', alt: 'Punfamm logo', class: 'w-48 mx-3.5' %>               
+      <% end %>
+    </div>
+    <div>
+      <h2 class="text-center text-2xl font-extrabold text-gray-100" >Sign up your Punfamm Account</h2>
+      <p class="mt-2 text-center text-sm text-gray-100" >
+        Have an account?
+        <%= link_to "Log in", new_user_session_path, class: "text-base font-medium text-gray-100 hover:text-red-500" %>
+      </p>
+    </div>
   <div>
-    <h1 class="h1 font-bold py-2">SIGN UP</h1>   
 
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
       <%= render "devise/shared/error_messages", resource: resource %>
-
-      <div class="field py-2">
-        <%= f.label :email %><br />
-        <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+      <div>
+        <%= f.label :email, "Email Address", class: "sr-only" %><br />
+        <%= f.email_field :email, autofocus: true, autocomplete: "off", placeholder: "Email Address", class: "appearance-none rounded-none relative block w-full px-3 py-3 border border-gray-400 bg-gray-900 placeholder-gray-100 text-gray-100 rounded-b-md rounded-t-md focus:outline-none focus:ring-gray-500 focus:border-gray-500 focus:border-gray-500 focus:z-10 sm:text-sm" %>
       </div>
-
-      <div class="field py-2">
-        <%= f.label :password %>
-        <% if @minimum_password_length %>
-        <em>(<%= @minimum_password_length %> characters minimum)</em>
-        <% end %><br />
-        <%= f.password_field :password, autocomplete: "new-password" %>
-      </div>
-
-      <div class="field py-2">
-        <%= f.label :password_confirmation %><br />
-        <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
-      </div>
-
-      <div class="actions py-2">
-        <%= f.submit "Sign up", class: "text-sm font-normal rounded-md text-white dark:text-white bg-cyan-700 hover:bg-cyan-600 hover:text-white dark:hover:text-gray-300 px-4 py-2 my-1 " %>
+       <div class="text-gray-100 text-sm mt-2">
+          <% if @minimum_password_length %>
+            <em class="mt-2">(<%= @minimum_password_length %> characters minimum)</em>
+          <% end %><br />
+          <%= f.label :password, "Password", class: "sr-only" %>
+          <%= f.password_field :password, autocomplete: "new-password", placeholder: "Password", class: "appearance-none rounded-none relative block w-full my-2 px-3 py-3 border border-gray-400 bg-gray-900  placeholder-gray-100 text-gray-100 rounded-b-md rounded-t-md focus:outline-none focus:ring-gray-500 focus:border-gray-500 focus:border-gray-500 focus:z-10 sm:text-sm" %>
+        </div>
+        <div>
+          <%= f.label :password, "Password Confirmation", class: "sr-only" %>
+          <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: "Password confirmation", class: "appearance-none rounded-none relative block w-full my-4 px-3 py-3 border border-gray-400 bg-gray-900  placeholder-gray-100 text-gray-100 rounded-b-md rounded-t-md focus:outline-none focus:ring-gray-500 focus:border-gray-500 focus:border-gray-500 focus:z-10 sm:text-sm" %>
+        </div>
+      <div>
+        <%= f.submit "Sign up", class: "airbnb-pink-gradient focus:ring-2 focus:ring-offset-2 focus:ring-red-700 text-sm font-semibold leading-none text-white focus:outline-none bg-red-700 border border-gray-700 rounded-none rounded-t-md rounded-b-md hover:bg-red-600 py-4 w-full" %>
       </div>
     <% end %>    
-    <p class="italic">have an account!<span class="italic font-bold">
-      <%= render "devise/shared/links" %>
-    </span></p>
+  </div>
   </div>
 </div>
