@@ -5,6 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :news_items, foreign_key: :author_id, dependent: :destroy
+  has_many :dailies, foreign_key: :editor_id, dependent: :destroy
   has_many :comments, dependent: :destroy
   has_one_attached :image  
   
