@@ -1,10 +1,3 @@
-# FactoryBot.define do
-#   factory :news_item_daily do
-#     news_item
-#     daily
-#   end
-# end
-
 FactoryBot.define do
   factory :news_item_daily do
     news_item
