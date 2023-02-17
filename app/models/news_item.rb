@@ -13,10 +13,4 @@ class NewsItem < ApplicationRecord
   validates :author_id, presence: true
   validates :image, presence: true
 
-  # def add_selected_news_item_to_daily(daily)
-  #   daily_id = daily.id
-  #   Daily.find(daily_id).news_items << self
-  #   NewsItemDaily.create(news_item_id: 1, daily_id: daily_id)
-  # end
-
 end

@@ -1,4 +1,3 @@
-# spec/factories/users.rb
 puts "Loading factory file: #{__FILE__}"
 FactoryBot.define do
   factory :user do

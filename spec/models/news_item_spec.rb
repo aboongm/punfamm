@@ -16,15 +16,4 @@ RSpec.describe NewsItem, type: :model do
     it { is_expected.to validate_presence_of(:author_id) }
     it { is_expected.to validate_presence_of(:image) }
   end
-
-  # describe '#add_selected_news_item_to_daily' do
-  #   let!(:news_item) { create(:news_item) }
-  #   let!(:daily) { create(:daily) }
-
-  #   it 'adds the news item to the daily' do
-  #     expect {
-  #       news_item.add_selected_news_item_to_daily(daily)
-  #     }.to change { daily.news_items.count }.by(1)
-  #   end
-  # end
 end

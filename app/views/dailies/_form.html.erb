@@ -12,15 +12,8 @@
   <% end %>
 
   <div class="my-5">
-    <%= form.date_select :posted_date %>
+    <%= form.date_select :posted_date, id: "daily_posted_date" %>
   </div>
-
-  <%# <% @categories.each do |category| %>
-      <%# <h1><%= category.title %></h1>
-      <%# <% collection_check_boxes(:daily, :news_item_ids, category.news_items, :id, :add_selected_news_item_to_daily) %>
-    
-      <%# <br /> %>
-  <%# <% end %>
 
   <% @categories.each do |category| %>
     <h1><%= category.title %></h1>

@@ -76,7 +76,7 @@
                                 <%= link_to 'Edit Account', edit_user_registration_path, class: "text-sm" %>
                             <% if current_user&.editor? %>
                                 <%= link_to "Create a News", new_news_item_path, class: "text-sm" %>
-                                <%= link_to "Create The Daily", new_editor_path, class: "text-sm" %>
+                                <%= link_to "Create The Daily", new_daily_path, class: "text-sm" %>
                             <% end %>
                             <% if current_user&.author? %>
                                 <%= link_to "Create a News", new_news_item_path, class: "text-sm" %>

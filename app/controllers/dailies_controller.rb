@@ -1,4 +1,5 @@
 class DailiesController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_daily, only: %i[ show edit update destroy ]
 
   # GET /dailies or /dailies.json
@@ -9,7 +10,6 @@ class DailiesController < ApplicationController
   # GET /dailies/1 or /dailies/1.json
   def show
     @dailies = Daily.all
-    current_user = User.find_by(id: session[:user_id])
   end
 
   # GET /dailies/new
@@ -22,14 +22,15 @@ class DailiesController < ApplicationController
   def edit
   end
 
-  # POST /dailies or /dailies.json
   def create
-    @daily = Daily.new(daily_params)
+    @daily = Daily.new(posted_date: Date.new(params[:daily]["posted_date(1i)"].to_i, params[:daily]["posted_date(2i)"].to_i, params[:daily]["posted_date(3i)"].to_i))
+    @daily.editor_id = current_user.id
     @categories = Category.includes(:news_items).all
 
-    # @daily.news_items << NewsItem.where(id: params[:news_item_ids])
-    puts "params[:news_item_ids] = #{params[:news_item_ids]}"
-    
+    params[:news_item_ids].each do |news_item_id|
+      @daily.news_item_dailies.build(news_item_id: news_item_id)
+    end
+
     respond_to do |format|
       if @daily.save
         format.html { redirect_to daily_url(@daily), notice: "Daily was successfully created." }
@@ -40,6 +41,7 @@ class DailiesController < ApplicationController
       end
     end
   end
+
 
   # PATCH/PUT /dailies/1 or /dailies/1.json
   def update
