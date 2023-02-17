@@ -22,10 +22,15 @@ class DailiesController < ApplicationController
   def edit
   end
 
-  def create
+  def create       
     @daily = Daily.new(posted_date: Date.new(params[:daily]["posted_date(1i)"].to_i, params[:daily]["posted_date(2i)"].to_i, params[:daily]["posted_date(3i)"].to_i))
+    Rails.logger.debug params[:daily]["posted_date(1i)"]
+    Rails.logger.debug params[:daily]["posted_date(2i)"]
+    Rails.logger.debug params[:daily]["posted_date(3i)"]
+    Rails.logger.flush
     @daily.editor_id = current_user.id
     @categories = Category.includes(:news_items).all
+    binding.pry
 
     params[:news_item_ids].each do |news_item_id|
       @daily.news_item_dailies.build(news_item_id: news_item_id)
