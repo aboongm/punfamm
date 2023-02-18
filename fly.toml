@@ -1,6 +1,6 @@
-# fly.toml file generated for punfamm on 2022-12-16T17:57:40+05:30
+# fly.toml file generated for punfamm1 on 2023-02-18T18:58:03+05:30
 
-app = "punfamm"
+app = "punfamm1"
 kill_signal = "SIGINT"
 kill_timeout = 5
 processes = []
@@ -17,7 +17,6 @@ processes = []
   PORT = "8080"
 
 [experimental]
-  allowed_public_ports = []
   auto_rollback = true
 
 [[services]]
@@ -49,7 +48,3 @@ processes = []
 [[statics]]
   guest_path = "/app/public"
   url_prefix = "/"
-
-[mounts]
-  source="punfamm"
-  destination="/data"
