@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Punfamm - Online News For The Enlightened!</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -11,6 +10,8 @@
       # 'https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@500&display=swap',
       "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
+    <%= favicon_link_tag asset_path('punfamm_favicon.png') %>
+    <title>Punfamm - Online News For The Enlightened!</title>
   </head>
 
   <body class="bg-gradient-to-r from-white to-gray-100">
