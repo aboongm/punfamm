@@ -67,12 +67,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_17_070018) do
     t.index ["editor_id"], name: "index_dailies_on_editor_id"
   end
 
-  create_table "editors", force: :cascade do |t|
-    t.datetime "posted_date"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "news_item_dailies", force: :cascade do |t|
     t.bigint "news_item_id", null: false
     t.bigint "daily_id", null: false

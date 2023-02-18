@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  resources :editors
   resources :news_item_dailies
   resources :news_items
   resources :dailies
