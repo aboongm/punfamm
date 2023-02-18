@@ -12,6 +12,10 @@ class NewsItemsController < ApplicationController
     @news_items = NewsItem.all
     @news_item = NewsItem.find(params[:id])
     @author = User.find_by(id: @news_item.author_id)
+    @business = NewsItem.all.where(category_id: 3).order("created_at desc")
+    #  Rails.logger.debug @business
+    #  Rails.logger.debug @health
+    # binding.pry
   end
 
   # GET /news_items/new

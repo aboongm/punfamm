@@ -253,6 +253,10 @@ input[type='file'] {
   z-index: 1;
 }
 
+.news__right{
+  display: none;
+}
+
 @media screen and (min-width: 768px) {
   .top-ads {
     display: inline;
@@ -432,5 +436,9 @@ input[type='file'] {
     padding: 20px 20px 20px 20px;
     border-left: 1px solid lightgray;
     border-bottom: 1px solid lightgray;
+  }
+
+  .news__right{
+    display: block;
   }
 }  
