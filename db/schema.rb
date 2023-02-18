@@ -67,12 +67,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_16_120533) do
     t.index ["editor_id"], name: "index_dailies_on_editor_id"
   end
 
-  create_table "editors", force: :cascade do |t|
-    t.datetime "posted_date"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "news_item_dailies", force: :cascade do |t|
     t.bigint "news_item_id", null: false
     t.bigint "daily_id", null: false
@@ -117,5 +111,4 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_16_120533) do
   add_foreign_key "news_item_dailies", "news_items"
   add_foreign_key "news_items", "categories"
   add_foreign_key "news_items", "users", column: "author_id"
-  add_foreign_key "subcategories", "categories"
 end
