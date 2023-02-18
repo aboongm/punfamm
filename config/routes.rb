@@ -1,9 +1,4 @@
 Rails.application.routes.draw do
-  resources :editors
-  resources :news_item_dailies
-  resources :news_items
-  resources :dailies
-  resources :categories
   root "pages#home"
   
   get 'pages/world'
@@ -21,6 +16,15 @@ Rails.application.routes.draw do
   get 'pages/opinion'
   get 'pages/underconstruction'
   
+  resources :news_item_dailies
+  resources :news_items
+  resources :dailies
+  resources :categories
+
+  resources :news_items do
+    get 'subcategories', on: :collection
+  end
+
   devise_for :users,
   path: '',
   path_names: { sign_in: 'login', sign_out: 'logout', edit: 'profile', sign_up: 'registration' }, 

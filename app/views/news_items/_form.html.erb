@@ -15,12 +15,14 @@
     <%= form.label :title %> <br/>
     <%= form.text_field :title, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 w-full" %>
   </div>
-  
+
   <div class="my-3 category">
-    <%= form.label :category_id %><br/>
-    <%= form.select :category_id, 
-      Category.all.map { |c| [c.title, c.id] } %>
-  </div>
+  <%= form.label :category_id %><br/>
+  <%= form.select :category_id, 
+    Category.all.map { |c| [c.title, c.id] } %>
+   
+</div>
+
 
   <div class="my-3">
     <%= form.label :content %><br/>
