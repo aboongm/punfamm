@@ -34,7 +34,7 @@ Category.create!(title: 'Punfamm Leadership')
 Category.create!(title: 'Punfamm Newsletters')
 Category.create!(title: 'Work for Punfamm')
 
-category = Category.all
+# category = Category.all
 # category.each do |t|
 #     2.times do |news|
 #         NewsItem.create!(title: "#{news} News", content: "News body #{news}", category_id: t.id, author_id: 3)

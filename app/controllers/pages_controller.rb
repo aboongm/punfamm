@@ -4,7 +4,8 @@ class PagesController < ApplicationController
   def home
     @date = Date.today
     @daily = Daily.find_by(posted_date: @date.to_s)
-    @politics = NewsItem.all.where(category_id: 2).order("created_at desc")
+    @business = NewsItem.all.where(category_id: 3).order("created_at desc")
+    @health = NewsItem.all.where(category_id: 5).order("created_at desc")
     # binding.pry
   end
 

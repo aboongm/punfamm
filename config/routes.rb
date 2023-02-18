@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  resources :news_item_dailies
+  resources :news_items
+  resources :dailies
+  resources :categories
   root "pages#home"
   
   get 'pages/world'

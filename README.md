@@ -1,75 +1,54 @@
-# News App - A Full-stack Rails App
+# Punfamm - A Full-stack Rails News App
 
-This Rails app allows 4 different types of users viz admin, editor, author and subscriber. It allows the following features:
-- Admin can change the role of any user
-- Editor can create and delete daily collection of news as well as create, edit and delete news.
-- Author can create, edit and delete news.
-- Subscriber can view all the news and can subscribe to the daily collection of news.
+A detailed list of the key features that need to be included in the website, such as news categories, search functionality, user accounts, and more.
+
+- News Categories: The online news app will offer a wide range of news categories, including local, national, and international news, as well as breaking news and top stories. Users will be able to select their preferred news categories and receive news updates in real-time.
+
+- Search Functionality: The online news app will offer a powerful search functionality that allows users to quickly find news articles of interest. The search will be able to search by keyword, date, and other parameters, and will return relevant results with precision.
+
+- User Accounts: Users will be able to create personal accounts, where they can save articles, receive news updates, and manage their preferences. This will enhance the user experience and provide users with a more personalized experience.
+
+- Personalized News Feed: The online news app will use machine learning algorithms to personalize the news feed for each user based on their interests and preferences. This will ensure that users receive news that is relevant to them, and will reduce the amount of irrelevant news that they receive.
+
+- Push Notifications: Users will be able to receive push notifications for breaking news and important stories, even when they are not using the app. This will help to keep users informed and engaged, and will provide a more convenient way to stay up-to-date with the latest news.
+
+- Social Media Integration: The online news app will be integrated with popular social media platforms, such as Facebook, Twitter, and Instagram. This will allow users to share articles and news updates with their friends and followers, and will help to increase the reach of the app.
+
 
 ## Live server
 [Demo](https://punfamm.fly.dev/pages/world)
 
 
 ## Built With
-- Ruby 3.1.3
-- Ruby on Rails 7
+- Ruby 3.2.0
+- Ruby on Rails 7.0.4
 - Postgresql
 - TailwindCSS
 
+### Authentication
+- Devise
+- OAuth
 
+### Authorization
+- Pundit
 
-## Screenshots
+### Caching
+- Redis
 
+### Background Jobs
+- Sidekiq
 
-### Mobile Version 
-
-
-<div style="text-align: center">
-    <img src="https://user-images.githubusercontent.com/49184579/208224809-0eb1d571-4115-409f-9b11-44a2d8c8e096.png" alt="homepage-mobile" width="360">
-</div>
-
-
-<div style="text-align: center">
-    <img src="https://user-images.githubusercontent.com/49184579/208224815-2a29670e-387c-456e-bd2b-ecea395b7ad5.png" alt="homepage-tablet" width="680">
-</div>
-
-
-
-### Desktop version
-
-
-<div style="text-align: center">
-    <img src="https://user-images.githubusercontent.com/49184579/208224805-56848865-d517-46c5-b2e6-76918ad339f2.png"  width="600" alt="Homepage-desktop">
-</div>
-
-
-<div style="text-align: center">
-    <img src="https://user-images.githubusercontent.com/49184579/208224783-211884f2-6d0b-42d1-a21a-5002fea2e994.png"  width="600" alt="categorypage-desktop">
-</div>
-
-
-<div style="text-align: center">
-    <img src="https://user-images.githubusercontent.com/49184579/208224822-2c73d38f-0701-47fe-95f3-d8e68dfd895f.png" width="600" alt="login-desktop">
-</div>
+### Searching
+- ElasticSearch
 
 
 
-
-## Author 1:
+## Author:
 
 👤 **Ranjit Luwang**
 - GitHub: [@aboongm](https://github.com/aboongm)
 - Twitter: [@John_luang1](https://twitter.com/John_luang1)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/aboongm)
-
-
-## Author 2:
-
-👤 **Oybek Kayumov**
-
-- GitHub: [@githubhandle](https://github.com/OybekKayumov)
-- Twitter: [@twitterhandle](https://twitter.com/KayumovOybek)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/oybek-kayumov/)
 
 
 ## 🤝 Contributing

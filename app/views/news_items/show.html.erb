@@ -1,12 +1,24 @@
-<div class="mx-auto md:w-2/3 w-full flex py-10 border px-5 bg-gray-100 text-gray-800 text-sm">
-  <div class="mx-auto">
-    <% if notice.present? %>
-      <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
-    <% end %>
+<div class="world__news gap-5">
+  <div class="w-full flex my-5 border p-5 bg-gray-100 text-gray-800 text-sm">
+    <div class="mx-auto">
+      <% if notice.present? %>
+        <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
+      <% end %>
 
-    <%= render @news_item %>
-
-   
-   
+      <%= render @news_item %>   
+    </div>
   </div>
+  <div class="home__right__side">
+      <h2 class="font-bold text-md mt-7 mb-2 md:ml-5 italic border-b-2 border-gray-300">Business</h2>
+      <% @business[0..3].each do |news|  %>
+        <div class="md:pl-5 py-3 border-b-2">
+            <%= link_to news do  %>
+                <%= image_tag news.image, style: "width: 500px" %>
+                <h1 class="news__title mt-4 mb-3"><%= news.title %></h1>
+            <% end  %>
+            <p><%= news.content.truncate(150) %></p>
+        </div>
+      <% end %>
+  </div>
+
 </div>
