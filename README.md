@@ -16,7 +16,7 @@ A detailed list of the key features that need to be included in the website, suc
 
 
 ## Live server
-[Demo](https://punfamm.fly.dev/pages/world)
+[Demo](https://punfamm1.fly.dev/pages/world)
 
 
 ## Built With
